@@ -1,7 +1,8 @@
 MEAN Stack Business Transactions App 🚀
+
 A high-performance MEAN Stack application that allows users to search, filter, and paginate business transactions efficiently with 10K+ records. This project is optimized for fast searches, minimum backend load, and scalable pagination.
 
-🔹 Features
+ Features
 ✔ Optimized Search Algorithm (MongoDB Indexing)
 ✔ Fast & Efficient Pagination (Cursor-based)
 ✔ Date Range Filtering
@@ -14,29 +15,21 @@ Frontend (Angular)
 Angular 17
 
 Angular Material / Bootstrap
-
 HTTP Client for API requests
-
 RxJS for handling async data
 
 Backend (Node.js + Express)
 Express.js
-
 Mongoose (MongoDB ODM)
-
 Dotenv (Environment variables)
-
 CORS (Cross-Origin Resource Sharing)
 
 Database (MongoDB)
 MongoDB with indexing for fast searches
-
 Stores transactionId, amount, date, and type
 
-📂 Project Structure
-bash
-Copy
-Edit
+Project Structure
+
 mean-search-app/
 │── backend/                   # Backend code (Node.js + Express)
 │   ├── models/                 # Mongoose schemas
@@ -52,13 +45,15 @@ mean-search-app/
 │   ├── src/app/app-routing.ts  # Angular routing
 │
 └── README.md                   # Project Documentation
-🚀 How to Run the Project
-1️⃣ Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/mean-search-app.git
-cd mean-search-app
+
+
+ How to Run the Project
+
+ 1️⃣ Clone the Repository
+
+ git clone https://github.com/Dipesh-Arwat/ChiefExTechnologies-Task.git
+cd mean-search-server
+
 📌 Backend Setup (Node.js + Express)
 2️⃣ Install Dependencies
 bash
@@ -110,8 +105,12 @@ Edit
   "date": "2024-03-25T10:00:00.000Z",
   "type": "credit"
 }
+
+
 2️⃣ Search Transactions (With Pagination)
 GET /api/transactions/search?query=TXN&page=1&limit=10
+
+
 
 3️⃣ Filter Transactions by Date
 GET /api/transactions/filter?startDate=2024-01-01&endDate=2024-12-31
@@ -120,6 +119,7 @@ GET /api/transactions/filter?startDate=2024-01-01&endDate=2024-12-31
 ✔ Search by Transaction ID
 ✔ Date Range Filter
 ✔ Pagination with Next & Previous
+
 
 💡 Future Improvements
 🔹 Sorting (By Amount, Date, etc.)
