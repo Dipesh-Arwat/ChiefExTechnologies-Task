@@ -1,0 +1,52 @@
+<div class="container mt-4">
+    <h2 class="text-center">Business Transactions</h2>
+  
+    <!-- Search Bar -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="text" [(ngModel)]="query" class="form-control" placeholder="Search by Transaction ID" (keyup)="fetchTransactions()">
+      </div>
+    </div>
+  
+    <!-- Date Range Filter -->
+    <div class="row mb-3">
+      <div class="col-md-3">
+        <label>Start Date:</label>
+        <input type="date" [(ngModel)]="startDate" class="form-control">
+      </div>
+      <div class="col-md-3">
+        <label>End Date:</label>
+        <input type="date" [(ngModel)]="endDate" class="form-control">
+      </div>
+      <div class="col-md-3 d-flex align-items-end">
+        <button class="btn btn-primary" (click)="filterByDate()">Filter</button>
+      </div>
+    </div>
+  
+    <!-- Transactions Table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.transactionId }}</td>
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.date | date }}</td>
+          <td>{{ transaction.type | uppercase }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Pagination Controls -->
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-secondary" (click)="prevPage()" [disabled]="page === 1">Previous</button>
+      <button class="btn btn-secondary" (click)="nextPage()">Next</button>
+    </div>
+  </div>
+  
